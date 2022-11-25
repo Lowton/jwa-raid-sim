@@ -1,42 +1,31 @@
 package com.github.lowton.jwa;
 
-import com.github.lowton.jwa.entity.Actor;
+import com.github.lowton.jwa.actor.ActorService;
+import com.github.lowton.jwa.actor.dto.Actor;
+import com.github.lowton.jwa.actor.dto.Team;
 
-import java.util.*;
-
-import static java.util.Comparator.comparingInt;
-import static java.util.stream.Collectors.toCollection;
-import static java.util.stream.Collectors.toMap;
+import java.util.Set;
 
 public class Game {
-    public static void run() {
-        System.out.println("Starting battle");
-        new Game().start();
-        System.out.println("Finish");
+
+    private ActorService actorService;
+
+    public Game(ActorService actorService) {
+        this.actorService = actorService;
     }
 
-    private void start() {
+    public void start() {
+        System.out.println("Starting battle");
         final var actors = this.prepareActors();
-        for(var i: new int[2]) {
-            final var acts = actors.stream().collect(toMap(actor -> actor, Actor::act));
-            actors.stream()
-                    .filter(Actor::alive) // только живые
-                    .sorted(comparingInt(Actor::speed).reversed())
-                    .forEach(actor -> actors.stream().filter(Actor::alive)
-                            .forEach(enemy -> enemy.apply(acts.get(actor))));
-        }
+        // добавить сущность раунда и хода
+
+        System.out.println("Finish");
     }
 
     private Set<Actor> prepareActors() {
         return Set.of(
-                Actor.player("tor", "Tor", 3000, 500, 125)
-                        .setMovesQueue(this.queueOf(1, 1)),
-                Actor.boss("goat", "Goat", 5000, 200, 120)
-                        .setMovesQueue(this.queueOf(1, 1, 1, 1))
+                this.actorService.getActor("tor", 30, Team.PLAYER),
+                this.actorService.getActor("goat", 30, Team.BOSS)
         );
-    }
-
-    private Queue<Integer> queueOf(final Integer ...moves) {
-        return Arrays.stream(moves).collect(toCollection(LinkedList::new));
     }
 }
