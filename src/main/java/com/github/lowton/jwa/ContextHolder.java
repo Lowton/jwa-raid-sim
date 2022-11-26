@@ -1,10 +1,11 @@
 package com.github.lowton.jwa;
 
-import com.github.lowton.jwa.action.DummyActionRepository;
+import com.github.lowton.jwa.action.act.DummyActRepository;
 import com.github.lowton.jwa.action.ActionService;
 import com.github.lowton.jwa.actor.ActorService;
-import com.github.lowton.jwa.personality.DummyPersonalityRepository;
-import com.github.lowton.jwa.resistance.DummyResistanceRepository;
+import com.github.lowton.jwa.action.effect.DummyEffectRepository;
+import com.github.lowton.jwa.actor.personality.DummyPersonalityRepository;
+import com.github.lowton.jwa.actor.resistance.DummyResistanceRepository;
 
 public class ContextHolder {
 
@@ -16,8 +17,8 @@ public class ContextHolder {
                         new DummyPersonalityRepository(),
                         new DummyResistanceRepository(),
                         new ActionService(
-                                new DummyActionRepository()
-                        )))
+                                new DummyActRepository(),
+                                new DummyEffectRepository())))
                 .start();
     }
 }

@@ -2,6 +2,7 @@ package com.github.lowton.jwa;
 
 import com.github.lowton.jwa.actor.ActorService;
 import com.github.lowton.jwa.actor.dto.Actor;
+import com.github.lowton.jwa.actor.dto.StatBoosts;
 import com.github.lowton.jwa.actor.dto.Team;
 
 import java.util.Set;
@@ -24,8 +25,8 @@ public class Game {
 
     private Set<Actor> prepareActors() {
         return Set.of(
-                this.actorService.getActor("tor", 30, Team.PLAYER),
-                this.actorService.getActor("goat", 30, Team.BOSS)
+                this.actorService.getActor("tor", 30, StatBoosts.empty(), Team.PLAYER),
+                this.actorService.getActor("goat", 30, StatBoosts.empty(), Team.BOSS)
         );
     }
 }

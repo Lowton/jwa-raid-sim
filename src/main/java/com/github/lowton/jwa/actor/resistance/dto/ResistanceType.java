@@ -1,4 +1,4 @@
-package com.github.lowton.jwa.resistance.dto;
+package com.github.lowton.jwa.actor.resistance.dto;
 
 import java.util.Arrays;
 

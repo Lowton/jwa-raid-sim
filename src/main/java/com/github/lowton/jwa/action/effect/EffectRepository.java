@@ -1,6 +1,6 @@
-package com.github.lowton.jwa.effect;
+package com.github.lowton.jwa.action.effect;
 
-import com.github.lowton.jwa.effect.dto.Effect;
+import com.github.lowton.jwa.action.effect.dto.Effect;
 
 import java.util.Optional;
 

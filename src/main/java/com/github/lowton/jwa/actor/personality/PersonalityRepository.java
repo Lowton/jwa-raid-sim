@@ -1,6 +1,6 @@
-package com.github.lowton.jwa.personality;
+package com.github.lowton.jwa.actor.personality;
 
-import com.github.lowton.jwa.personality.dto.Personality;
+import com.github.lowton.jwa.actor.personality.dto.Personality;
 
 import java.util.Optional;
 
