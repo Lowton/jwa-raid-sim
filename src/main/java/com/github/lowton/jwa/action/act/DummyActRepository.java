@@ -1,7 +1,6 @@
 package com.github.lowton.jwa.action.act;
 
 import com.github.lowton.jwa.action.act.dto.Act;
-import com.github.lowton.jwa.entity.Target;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,7 @@ public class DummyActRepository implements ActRepository {
 
     public DummyActRepository() {
         this.acts = Map.of(
-                "simple-attack", new Act("simple-attack", "Bite", Target.maxHealth(), List.of("damage"))
+                "simple-attack", new Act("simple-attack", "Bite", List.of("damage"))
         );
     }
 
