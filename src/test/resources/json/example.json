@@ -1,0 +1,75 @@
+{
+  "versionGame": "v2.20",
+  "currentRaid": "b_meiolania",
+  "turnsPerRound":
+  {
+    "1": 4,
+    "2": 4
+  },
+  "creatures":
+  {
+    "1": {"uuid": "albertosaurus"},
+    "2": {"uuid": "ankylosaurus_gen_2"}
+  },
+  "moves":
+  {
+    "1":
+    {
+      "1":
+      {
+        "1": "fierce_impact",
+        "2": "killer_instinct",
+        "3": "fierce_impact",
+        "4": "killer_instinct"
+      },
+      "2":
+      {
+        "1": "fierce_impact",
+        "2": "killer_instinct",
+        "3": "fierce_impact",
+        "4": "killer_instinct"
+      }
+    },
+    "2":
+    {
+      "1":
+      {
+        "1": "superior_vulnerability",
+        "2": "group_taunting_shields",
+        "3": "superior_vulnerability",
+        "4": "group_taunting_shields"
+      },
+      "2":
+      {
+        "1": "superior_vulnerability",
+        "2": "group_taunting_shields",
+        "3": "superior_vulnerability",
+        "4": "group_taunting_shields"
+      }
+    }
+  },
+  "creditBold": "",
+  "credit": "",
+  "note": "",
+  "name": "Fake",
+  "updatedAt": 1670740088061,
+  "uuid": "4bf8080f-70da-4b80-ae8f-0466aecb3d30",
+  "config":
+  {
+    "viewWidth": 900,
+    "moveIconSize": 60,
+    "dinoIconSize": 60,
+    "minReqWidth": 70,
+    "showBossMoves": true,
+    "showMinionIcons": true,
+    "showMoveAbbrev": false,
+    "showMoveNumber": true,
+    "showTurnNumber": true,
+    "alternateRowColor": true,
+    "colorBg": "#242728",
+    "colorText": "#ffffff",
+    "colorHeader": "#2c2f33",
+    "colorRowAlt": "#1f2123",
+    "colorBanner": "#1d2025"
+  }
+}
