@@ -1,14 +1,15 @@
 {
   "versionGame": "v2.20",
-  "currentRaid": "b_meiolania",
+  "currentRaid": "goat",
   "turnsPerRound":
   {
-    "1": 1
+    "1": 5,
+    "2": 5
   },
   "creatures":
   {
-    "1": {"uuid": "albertosaurus"},
-    "2": {"uuid": "ankylosaurus_gen_2"}
+    "1": {"uuid": "tor"},
+    "2": {"uuid": "tor"}
   },
   "moves":
   {
@@ -16,34 +17,38 @@
     {
       "1":
       {
-        "1": "fierce_impact",
-        "2": "killer_instinct",
-        "3": "fierce_impact",
-        "4": "killer_instinct"
+        "1": "simple-attack",
+        "2": "simple-attack",
+        "3": "simple-attack",
+        "4": "simple-attack",
+        "5": "simple-attack"
       },
       "2":
       {
-        "1": "fierce_impact",
-        "2": "killer_instinct",
-        "3": "fierce_impact",
-        "4": "killer_instinct"
+        "1": "simple-attack",
+        "2": "simple-attack",
+        "3": "simple-attack",
+        "4": "simple-attack",
+        "5": "simple-attack"
       }
     },
     "2":
     {
       "1":
       {
-        "1": "superior_vulnerability",
-        "2": "group_taunting_shields",
-        "3": "superior_vulnerability",
-        "4": "group_taunting_shields"
+        "1": "simple-attack",
+        "2": "simple-attack",
+        "3": "simple-attack",
+        "4": "simple-attack",
+        "5": "simple-attack"
       },
       "2":
       {
-        "1": "superior_vulnerability",
-        "2": "group_taunting_shields",
-        "3": "superior_vulnerability",
-        "4": "group_taunting_shields"
+        "1": "simple-attack",
+        "2": "simple-attack",
+        "3": "simple-attack",
+        "4": "simple-attack",
+        "5": "simple-attack"
       }
     }
   },

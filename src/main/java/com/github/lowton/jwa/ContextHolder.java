@@ -7,6 +7,7 @@ import com.github.lowton.jwa.action.effect.DummyEffectRepository;
 import com.github.lowton.jwa.actor.personality.DummyPersonalityRepository;
 import com.github.lowton.jwa.actor.resistance.DummyResistanceRepository;
 import com.github.lowton.jwa.schema.DummyReceiver;
+import com.github.lowton.jwa.schema.boss.DummyBossRepository;
 
 public class ContextHolder {
 
@@ -22,7 +23,8 @@ public class ContextHolder {
                         new ActionService(
                                 new DummyActRepository(),
                                 new DummyEffectRepository())),
-                new DummyReceiver(pathToJson))
+                new DummyReceiver(pathToJson),
+                new DummyBossRepository())
                 .start();
     }
 }
