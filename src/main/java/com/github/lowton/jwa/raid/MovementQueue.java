@@ -1,4 +1,4 @@
-package com.github.lowton.jwa.entity;
+package com.github.lowton.jwa.raid;
 
 import static java.util.Comparator.comparing;
 

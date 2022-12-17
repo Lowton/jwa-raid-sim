@@ -6,19 +6,23 @@ import com.github.lowton.jwa.actor.ActorService;
 import com.github.lowton.jwa.action.effect.DummyEffectRepository;
 import com.github.lowton.jwa.actor.personality.DummyPersonalityRepository;
 import com.github.lowton.jwa.actor.resistance.DummyResistanceRepository;
+import com.github.lowton.jwa.schema.DummyReceiver;
 
 public class ContextHolder {
 
     private ContextHolder() {}
 
     public static void run() {
+        final var pathToJson = "src/main/resources/dummy.json";
+        
         new Game(
                 new ActorService(
                         new DummyPersonalityRepository(),
                         new DummyResistanceRepository(),
                         new ActionService(
                                 new DummyActRepository(),
-                                new DummyEffectRepository())))
+                                new DummyEffectRepository())),
+                new DummyReceiver(pathToJson))
                 .start();
     }
 }

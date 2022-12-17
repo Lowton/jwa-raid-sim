@@ -3,8 +3,6 @@ package com.github.lowton.jwa.action.effect.dto;
 import java.util.Comparator;
 
 import com.github.lowton.jwa.actor.dto.Actor;
-import com.github.lowton.jwa.entity.Characteristic;
-import com.github.lowton.jwa.entity.Extremum;
 
 public record Target(Characteristic characteristic, Extremum extremum) {
 

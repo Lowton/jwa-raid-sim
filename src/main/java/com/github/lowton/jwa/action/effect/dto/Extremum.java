@@ -1,4 +1,4 @@
-package com.github.lowton.jwa.entity;
+package com.github.lowton.jwa.action.effect.dto;
 
 public enum Extremum {
     MINIMUM,

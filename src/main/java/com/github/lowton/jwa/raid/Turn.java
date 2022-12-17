@@ -1,4 +1,4 @@
-package com.github.lowton.jwa.entity;
+package com.github.lowton.jwa.raid;
 
 import static java.util.Collections.emptyList;
 
@@ -12,18 +12,20 @@ import com.github.lowton.jwa.action.dto.ActionEffect;
 import com.github.lowton.jwa.action.effect.dto.Target;
 import com.github.lowton.jwa.actor.dto.Actor;
 import com.github.lowton.jwa.actor.dto.Team;
+import com.github.lowton.jwa.schema.dto.TurnSchema;
 
 public class Turn {
-	private Collection<Actor> actors;
-	private Map<String, String> moves;
+	private final Collection<Actor> actors;
+	private final Map<Actor, String> moves;
 	
-	public Turn(final Collection<Actor> actors, final Map<String, String> moves) {
-		this.actors = actors;
-		this.moves = moves;
+	public Turn(final TurnSchema moves) {
+		this.moves = moves.moves();
+		this.actors = this.moves.keySet();
 	}
 	
 	public void complete() {
-		final var actions = this.actors.stream().map(actor -> actor.action(this.moves.get(actor.id()))).toList();
+		this.actors.forEach(System.out::println);
+		final var actions = this.actors.stream().map(actor -> actor.action(this.moves.get(actor))).toList();
 		final var queue = new MovementQueue(actions);
 		
 		while (queue.isNotEmpty()) {
